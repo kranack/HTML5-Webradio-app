@@ -8,7 +8,7 @@ Description
 -----------
 An online HTML5 Webradio Player for Firefox OS
 
-Latest version online : http://z.sa.123.fr/uploads/HTML5-Webradio/
+Latest server version online : http://i.sa.123.fr/uploads/webradio-server/
 
 
 Radios
