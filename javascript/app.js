@@ -15,8 +15,6 @@ $(document).ready(function() {
 	
 	// Initialize the player
 	RADIO_PLAYER.init();
-	// Set the display refresh on
-	CHRONOS.init();
 	
 	$("#chooseRadio").blur(function() {
 		POOL_CURRENT_RADIO = $(this).val();
@@ -24,7 +22,7 @@ $(document).ready(function() {
 		
 		//POOL_SERVER = $(this).children(":selected").attr('id');
 		$("#player").attr("src", val);
-		$("#player").attr("autoplay", true);
+		//$("#player").attr("autoplay", autoplay);
 		RADIO_PLAYER.onAir();
 	});
 });
@@ -76,6 +74,8 @@ var RADIO_PLAYER = function(){
 			// Get and display the radio list
 			DATAS.getRadiosList();
 			
+			// Set the display refresh on
+			CHRONOS.init();
 
 			RADIO_PLAYER.radioPlayerContainer = $("#player");
 			RADIO_PLAYER.radioPlayer = RADIO_PLAYER.radioPlayerContainer[0];
