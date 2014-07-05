@@ -1,0 +1,14 @@
+{
+  "name": "HTML5 Radio",
+  "description": "Un lecteur de webradios HTML5",
+  "launch_path": "/",
+  "icons": {
+    "128": "/images/icons/icon-128.png"
+	"60": "/images/icons/icon-60.png"
+  },
+  "developer": {
+    "name": "Damien Calesse",
+    "url": "http://www.damien.calesse.fr"
+  },
+  "default_locale": "fr"
+}
