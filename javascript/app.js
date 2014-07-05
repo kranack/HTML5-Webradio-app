@@ -151,7 +151,6 @@ var RADIO_PLAYER = function(){
 				url: SERVER_URL_LIB+'onAir.php?server='+POOL_DATA_RADIOS[POOL_CURRENT_RADIO].id+'&address='+POOL_DATA_SERVERS[POOL_CURRENT_RADIO].address,
 				type: 'GET',
 				success: function(r) {
-					console.log(r);
 					switch (POOL_DATA_RADIOS[POOL_CURRENT_RADIO].id) {
 						case 'chillstep' :
 							var art_inf = r.now_playing.artist.split("-");
@@ -162,7 +161,7 @@ var RADIO_PLAYER = function(){
 							if (r.now_playing.emission)
 								$("#infos").html('<b>'+r.now_playing.emission+'</b> avec '+r.now_playing.animateur+'<br>'+setToLowerCase(r.now_playing.artist)+'-'+r.now_playing.track);
 							else
-								if (r.now_playing.track == null)
+								if (r.now_playing.track == 'null')
 									$("#infos").html(setToLowerCase(r.now_playing.artist));
 								else
 									$("#infos").html(setToLowerCase(r.now_playing.artist)+'-'+r.now_playing.track);
