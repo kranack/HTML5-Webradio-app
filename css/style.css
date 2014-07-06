@@ -82,16 +82,3 @@ a {
 		width: auto;
 		height: 100px;
 	}
-	
-#radioList {
-	border: 1px solid red; 
-	height: 400px; 
-	width: 200px; 
-	float: right;
-}
-
-#radiobar {
-	width: auto;
-	height: 100px;
-	border: 1px solid red;
-}
