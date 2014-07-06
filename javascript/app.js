@@ -159,7 +159,10 @@ var RADIO_PLAYER = function(){
 							break;
 						default :
 							if (r.now_playing.emission)
-								$("#infos").html('<b>'+r.now_playing.emission+'</b> avec '+r.now_playing.animateur+'<br>'+setToLowerCase(r.now_playing.artist)+'-'+r.now_playing.track);
+								if(r.now_playing.animateur)
+									$("#infos").html('<b>'+r.now_playing.emission+'</b> avec '+r.now_playing.animateur+'<br>'+setToLowerCase(r.now_playing.artist)+'-'+r.now_playing.track);
+								else
+									$("#infos").html('<b>'+r.now_playing.emission+'</b> <br>'+setToLowerCase(r.now_playing.artist)+'-'+r.now_playing.track);
 							else
 								if (r.now_playing.track == 'null')
 									$("#infos").html(setToLowerCase(r.now_playing.artist));
