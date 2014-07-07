@@ -198,8 +198,7 @@ var RADIO_PLAYER = function(){
 				normalList +=POOL_DATA_RADIOS[i].name;
 				normalList +='</p>';
 			}
-			$("#chooseRadio").html(list);
-			$("#radioList").html(list);			
+			$("#chooseRadio").html(list);		
 		}
 	}
 }();
