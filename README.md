@@ -18,6 +18,11 @@ Radios
 * `Oxyradio` : http://www.oxyradio.net/
 * `Chillstep` : http://chillstep.info/
 * `Ouï FM` : http://www.ouifm.fr/
+* `France Info` : http://www.franceinfo.fr/
+* `France Inter` : http://www.franceinter.fr/
+* `France Musique` : http://www.francemusique.fr/
+* `France Culture` : http://www.franceculture.fr/
+* `FIP` : http://www.fipradio.fr/
 	
 
 Libs
