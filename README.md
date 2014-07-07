@@ -6,7 +6,7 @@ HTML5 Webradio Player for Firefox OS
 
 Description
 -----------
-An online HTML5 Webradio Player for Firefox OS
+An online HTML5 Webradio Player for Firefox OS (work with https://github.com/kranack/HTML5-Webradio-serv)
 
 Latest app version online : http://i.sa.123.fr/uploads/webradio-app/
 
