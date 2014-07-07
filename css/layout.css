@@ -39,8 +39,11 @@ a {
 #radioplayer {
 	margin: 0 auto 0 auto;
 	padding: 0 10px 20px 10px;
-	width: 50%;
+	width: 60%;
 	text-align: center;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
 }
 
 #infos {
@@ -51,6 +54,7 @@ a {
 #controls {
 	width: 50%;
 	padding: 10% 0 0 0;
+	margin-left: 25%;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;         /* Opera/IE 8+ */
@@ -75,7 +79,10 @@ a {
 
 	/* Smaller than standard 960 (devices and browsers) */
 	@media only screen and (max-width: 959px) {
-		
+		#controls {
+			width: 80%;
+			margin-left: 10%;
+		}
 	}
 
 	/* Tablet Portrait size to standard 960 (devices and browsers) */
@@ -91,7 +98,7 @@ a {
 		#radioplayer {
 			margin: 0 auto 0 auto;
 			padding: 0 10px 20px 10px;
-			width: 70%;
+			width: 90%;
 			text-align: center;
 		}
 	}
