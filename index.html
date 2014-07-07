@@ -6,7 +6,8 @@
 		<meta name="description" content="Lecteur de flux ogg et mp3 HTML5 compatible pour Firefox OS" />
 		<meta name="author" content="Damien Calesse">
 		<link rel="stylesheet" href="./css/normalize.css">
-		<link rel="stylesheet" href="./css/style.css">
+		<link rel="stylesheet" href="./css/font-awesome.min.css">
+		<link rel="stylesheet" href="./css/layout.css">
 	</head>
 	<body>
 		<div id="radioplayer">
@@ -15,7 +16,7 @@
 			<p> <span id="infos"> </span> </p>
 			<div id="cover">
 			</div>
-			<audio id="player" src="http://mp3.live.tv-radio.com/lemouv/all/lemouvhautdebit.mp3" controls autoplay>
+			<audio id="player" src="http://mp3.live.tv-radio.com/lemouv/all/lemouvhautdebit.mp3" controls autoplay preload='auto'>
 			</audio> <br>
 			<br>
 			<p> 
@@ -24,11 +25,11 @@
 				</select>
 			</p>
 			<div id="controls">
-				<a id="btn_play" href="#" ><img src="./images/buttons/Button_play.png" /></a>
-				<a id="btn_pause" href="#" ><img src="./images/buttons/Button_pause.png" /></a>
-				<a id="btn_stop" href="#" ><img src="./images/buttons/Button_stop.png" /></a>
-				<a id="btn_vol_less" href="#" ><img src="./images/buttons/Button_vol_down.png" /></a>
-				<a id="btn_vol_more" href="#" ><img src="./images/buttons/Button_vol_up.png" /></a>
+				<a id="btn_play" href="#" ><i class="fa fa-2x fa-play"></i></a>
+				<a id="btn_pause" href="#" ><i class="fa fa-2x fa-pause"></i></a>
+				<a id="btn_stop" href="#" ><i class="fa fa-2x fa-stop"></i></a>
+				<a id="btn_vol_less" href="#" ><i class="fa fa-2x fa-volume-down"></i></a>
+				<a id="btn_vol_more" href="#" ><i class="fa fa-2x fa-volume-up"></i></a>
 			</div>
 		</div>
 		

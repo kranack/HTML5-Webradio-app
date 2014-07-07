@@ -148,8 +148,9 @@ var RADIO_PLAYER = function(){
 		onAir : function() {
 			$.ajax({
 				dataType: 'json',
-				url: SERVER_URL_LIB+'onAir.php?server='+POOL_DATA_RADIOS[POOL_CURRENT_RADIO].id+'&address='+POOL_DATA_SERVERS[POOL_CURRENT_RADIO].address,
-				type: 'GET',
+				url: SERVER_URL_LIB+'onAir.php',
+				type: 'POST',
+				data: 'server='+POOL_DATA_RADIOS[POOL_CURRENT_RADIO].id+'&address='+POOL_DATA_SERVERS[POOL_CURRENT_RADIO].address,
 				success: function(r) {
 					switch (POOL_DATA_RADIOS[POOL_CURRENT_RADIO].id) {
 						case 'chillstep' :

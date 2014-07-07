@@ -6,5 +6,5 @@
  ************************************/
 
 function setToLowerCase (str) {
-	return str.toLowerCase();
+	return (str) ? str.toLowerCase() : '';
 }
