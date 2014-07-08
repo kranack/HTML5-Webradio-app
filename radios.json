@@ -27,6 +27,11 @@
 			"address": "http://ouifm.ice.infomaniak.ch/ouifm-high.mp3"
 		},
 		{
+			"id" : "virgin",
+			"name": "Virgin Radio",
+			"address": "http://mp3lg4.tdf-cdn.com/9243/lag_164753.mp3"
+		},
+		{
 			"id" : "franceinfo",
 			"name" : "France Info",
 			"address" : "http://mp3.live.tv-radio.com/franceinfo/all/franceinfo.mp3"
