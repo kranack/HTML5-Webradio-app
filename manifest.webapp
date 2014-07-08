@@ -1,10 +1,10 @@
 {
-  "name": "HTML5 Radio",
-  "description": "Un lecteur de webradios HTML5",
-  "launch_path": "/",
+  "name": "HTML5 WebRadio",
+  "description": "Lecteur de webradio HTML",
+  "launch_path": "/uploads/webradio-app/index.html",
   "icons": {
-    "128": "/images/icons/icon-128.png"
-	"60": "/images/icons/icon-60.png"
+    "128": "/uploads/webradio-app/images/icons/icon-128.png",
+    "60": "/uploads/webradio-app/images/icons/icon-60.png"
   },
   "developer": {
     "name": "Damien Calesse",

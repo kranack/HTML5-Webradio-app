@@ -161,17 +161,17 @@ var RADIO_PLAYER = function(){
 						default :
 							if (r.now_playing.emission)
 								if(r.now_playing.animateur)
-									if (r.now_playing.track == null)
+									if (r.now_playing.track == '')
 										$("#infos").html('<b>'+r.now_playing.emission+'</b> avec '+r.now_playing.animateur+'<br>'+setToLowerCase(r.now_playing.artist));
 									else
 										$("#infos").html('<b>'+r.now_playing.emission+'</b> avec '+r.now_playing.animateur+'<br>'+setToLowerCase(r.now_playing.artist)+'-'+r.now_playing.track);
 								else
-									if (r.now_playing.track == null)
+									if (r.now_playing.track == '')
 										$("#infos").html('<b>'+r.now_playing.emission+'</b> <br>'+setToLowerCase(r.now_playing.artist));
 									else
 										$("#infos").html('<b>'+r.now_playing.emission+'</b> <br>'+setToLowerCase(r.now_playing.artist)+'-'+r.now_playing.track);
 							else
-								if (r.now_playing.track == 'null')
+								if (r.now_playing.track == '')
 									$("#infos").html(setToLowerCase(r.now_playing.artist));
 								else
 									$("#infos").html(setToLowerCase(r.now_playing.artist)+'-'+r.now_playing.track);

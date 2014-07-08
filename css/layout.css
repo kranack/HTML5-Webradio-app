@@ -101,6 +101,9 @@ a {
 			width: 90%;
 			text-align: center;
 		}
+		#controls a {
+			margin: 0 6% 0 6%;
+		}
 	}
 
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
@@ -110,5 +113,8 @@ a {
 			padding: 0 10px 20px 10px;
 			width: 100%;
 			text-align: center;
+		}
+		#controls a {
+			margin: 0 4% 0 4%;
 		}
 	}
