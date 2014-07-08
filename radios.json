@@ -7,6 +7,11 @@
 			"address": "http://mp3.live.tv-radio.com/lemouv/all/lemouvhautdebit.mp3"
 		},
 		{
+			"id" : "neo",
+			"name": "Radio Néo",
+			"address": "http://stream.radioneo.org:8000/;.mp3"
+		},
+		{
 			"id" : "chillstep",
 			"name": "Chillstep",
 			"address": "http://96.47.239.155:1984/listen.ogg"

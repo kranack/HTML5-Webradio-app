@@ -6,6 +6,10 @@
 			"address": " "
 		},
 		{
+			"id" : "neo",
+			"address": ""
+		},
+		{
 			"id" : "chillstep",
 			"address": "http://96.47.239.155:1984"
 		},
