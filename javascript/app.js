@@ -4,6 +4,8 @@
  *	@author=Damien Calesse
  *
  ************************************/
+
+var DEBUG = 0;
 var POOL_CURRENT_RADIO = 0;
 var POOL_DATA_RADIOS = null;
 var POOL_DATA_SERVERS = null;
@@ -15,7 +17,9 @@ $(document).ready(function() {
 	
 	// Initialize the player
 	RADIO_PLAYER.init();
-	
+	// Log Message
+	LOG.init();
+
 	$("#chooseRadio").blur(function() {
 		POOL_CURRENT_RADIO = $(this).val();
 		var val = POOL_DATA_RADIOS[POOL_CURRENT_RADIO].address;
@@ -61,6 +65,34 @@ var DATAS = function() {
 					POOL_DATA_SERVERS = data.servers;
 				}
 			});
+		}
+	}
+}();
+
+var LOG = function() {
+	return {
+		init: function() {
+			if (localStorage.getItem('displayEE') === null) {
+				localStorage.setItem('displayEE', true);
+				LOG.displayEE();
+			} else {
+				if (localStorage.getItem('displayEE'))
+					LOG.displayEE();
+			}
+		},
+		displayEE: function() {
+			console.log(
+			'	 __    __  ________  __       __  __       _______         __       __            __                                 __  __           \n'+
+			'	|  \\  |  \\|        \\|  \\     /  \\|  \\     |       \\       |  \\  _  |  \\          |  \\                               |  \\|  \\          \n'+
+			'	| $$  | $$ \\$$$$$$$$| $$\\   /  $$| $$     | $$$$$$$       | $$ / \\ | $$  ______  | $$____    ______   ______    ____| $$ \\$$  ______  	\n'+
+			'	| $$__| $$   | $$   | $$$\\ /  $$$| $$     | $$____        | $$/  $\\| $$ /      \\ | $$    \\  /      \\ |      \\  /      $$|  \\ /      \\ 	\n'+
+			'	| $$    $$   | $$   | $$$$\\  $$$$| $$     | $$    \\       | $$  $$$\\ $$|  $$$$$$\\| $$$$$$$\\|  $$$$$$\\ \\$$$$$$\\|  $$$$$$$| $$|  $$$$$$\\	\n'+
+			'	| $$$$$$$$   | $$   | $$\\$$ $$ $$| $$      \\$$$$$$$\\      | $$ $$\\$$\\$$| $$    $$| $$  | $$| $$   \\$$/      $$| $$  | $$| $$| $$  | $$	\n'+
+			'	| $$  | $$   | $$   | $$ \\$$$| $$| $$_____|  \\__| $$      | $$$$  \\$$$$| $$$$$$$$| $$__/ $$| $$     |  $$$$$$$| $$__| $$| $$| $$__/ $$	\n'+
+			'	| $$  | $$   | $$   | $$  \\$ | $$| $$     \\\\$$    $$      | $$$    \\$$$ \\$$     \\| $$    $$| $$      \\$$    $$ \\$$    $$| $$ \\$$    $$	\n'+
+			'	 \\$$   \\$$    \\$$    \\$$      \\$$ \\$$$$$$$$ \\$$$$$$        \\$$      \\$$  \\$$$$$$$ \\$$$$$$$  \\$$       \\$$$$$$$  \\$$$$$$$ \\$$  \\$$$$$$ 	\n\n\n'+
+			'	To disable this message type localStorage.setItem(\'displayEE\', false) in javascript console \n'
+			);
 		}
 	}
 }();
@@ -152,6 +184,7 @@ var RADIO_PLAYER = function(){
 				type: 'POST',
 				data: 'server='+POOL_DATA_RADIOS[POOL_CURRENT_RADIO].id+'&address='+POOL_DATA_SERVERS[POOL_CURRENT_RADIO].address,
 				success: function(r) {
+					displayDebug(r);
 					switch (POOL_DATA_RADIOS[POOL_CURRENT_RADIO].id) {
 						case 'chillstep' :
 							var art_inf = r.now_playing.artist.split("-");

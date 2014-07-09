@@ -6,6 +6,13 @@
     "128": "/uploads/webradio-app/images/icons/icon-128.png",
     "60": "/uploads/webradio-app/images/icons/icon-60.png"
   },
+  "chrome" : {
+    "navigation": false
+  },
+  "installs_allowed_from": [
+    "https://marketplace.firefox.com",
+    "http://i.sa.123.fr/uploads/webradio-app"
+  ],
   "developer": {
     "name": "Damien Calesse",
     "url": "http://www.damien.calesse.fr"
