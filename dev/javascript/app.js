@@ -9,8 +9,8 @@ var DEBUG = 0;
 var POOL_CURRENT_RADIO = 0;
 var POOL_DATA_RADIOS = null;
 var POOL_DATA_SERVERS = null;
-var SERVER_URL = "http://i.sa.123.fr/uploads/webradio-server/";
-var SERVER_URL_LIB = "http://i.sa.123.fr/uploads/webradio-server/lib/";
+var SERVER_URL = "http://kranack.github.io/HTML5-Webradio-serv/dev/";
+var SERVER_URL_LIB = "http://kranack.github.io/HTML5-Webradio-serv/dev/lib/";
 
 $(document).ready(function() {
 	var regex = /^[a-zA-Z0-9\-]*.mp3/;
