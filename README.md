@@ -19,6 +19,7 @@ Radios
 * `Oxyradio` : http://www.oxyradio.net/
 * `Chillstep` : http://chillstep.info/
 * `Ouï FM` : http://www.ouifm.fr/
+* `Virgin Radio` : http://www.virginradio.fr/
 * `France Info` : http://www.franceinfo.fr/
 * `France Inter` : http://www.franceinter.fr/
 * `France Musique` : http://www.francemusique.fr/
