@@ -25,14 +25,7 @@ Radios
 * `France Musique` : http://www.francemusique.fr/
 * `France Culture` : http://www.franceculture.fr/
 * `FIP` : http://www.fipradio.fr/
-	
-
-Libs
-----
-
-	- Simple HTML DOM
-	- Icecast
-	
+		
 
 Author
 ------
