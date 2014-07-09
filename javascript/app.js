@@ -17,8 +17,6 @@ $(document).ready(function() {
 	
 	// Initialize the player
 	RADIO_PLAYER.init();
-	// Log Message
-	LOG.init();
 
 	$("#chooseRadio").blur(function() {
 		POOL_CURRENT_RADIO = $(this).val();
@@ -29,6 +27,9 @@ $(document).ready(function() {
 		//$("#player").attr("autoplay", autoplay);
 		RADIO_PLAYER.onAir();
 	});
+	
+	// Log Message
+	LOG.init();
 });
 
 var CHRONOS = function() {
@@ -73,26 +74,15 @@ var LOG = function() {
 	return {
 		init: function() {
 			if (localStorage.getItem('displayEE') === null) {
-				localStorage.setItem('displayEE', true);
-				LOG.displayEE();
+				localStorage.setItem('displayEE', 'true');
+				LOG.displayInfos();
 			} else {
-				if (localStorage.getItem('displayEE'))
-					LOG.displayEE();
+				if (localStorage.getItem('displayEE') === 'true')
+					LOG.displayInfos();
 			}
 		},
-		displayEE: function() {
-			console.log(
-			'	 __    __  ________  __       __  __       _______         __       __            __                                 __  __           \n'+
-			'	|  \\  |  \\|        \\|  \\     /  \\|  \\     |       \\       |  \\  _  |  \\          |  \\                               |  \\|  \\          \n'+
-			'	| $$  | $$ \\$$$$$$$$| $$\\   /  $$| $$     | $$$$$$$       | $$ / \\ | $$  ______  | $$____    ______   ______    ____| $$ \\$$  ______  	\n'+
-			'	| $$__| $$   | $$   | $$$\\ /  $$$| $$     | $$____        | $$/  $\\| $$ /      \\ | $$    \\  /      \\ |      \\  /      $$|  \\ /      \\ 	\n'+
-			'	| $$    $$   | $$   | $$$$\\  $$$$| $$     | $$    \\       | $$  $$$\\ $$|  $$$$$$\\| $$$$$$$\\|  $$$$$$\\ \\$$$$$$\\|  $$$$$$$| $$|  $$$$$$\\	\n'+
-			'	| $$$$$$$$   | $$   | $$\\$$ $$ $$| $$      \\$$$$$$$\\      | $$ $$\\$$\\$$| $$    $$| $$  | $$| $$   \\$$/      $$| $$  | $$| $$| $$  | $$	\n'+
-			'	| $$  | $$   | $$   | $$ \\$$$| $$| $$_____|  \\__| $$      | $$$$  \\$$$$| $$$$$$$$| $$__/ $$| $$     |  $$$$$$$| $$__| $$| $$| $$__/ $$	\n'+
-			'	| $$  | $$   | $$   | $$  \\$ | $$| $$     \\\\$$    $$      | $$$    \\$$$ \\$$     \\| $$    $$| $$      \\$$    $$ \\$$    $$| $$ \\$$    $$	\n'+
-			'	 \\$$   \\$$    \\$$    \\$$      \\$$ \\$$$$$$$$ \\$$$$$$        \\$$      \\$$  \\$$$$$$$ \\$$$$$$$  \\$$       \\$$$$$$$  \\$$$$$$$ \\$$  \\$$$$$$ 	\n\n\n'+
-			'	To disable this message type localStorage.setItem(\'displayEE\', false) in javascript console \n'
-			);
+		displayInfos: function() {
+			console.info('%c	 __    __  ________  __       __  __       _______         __       __            __                                 __  __           \n'+'	|  \\  |  \\|        \\|  \\     /  \\|  \\     |       \\       |  \\  _  |  \\          |  \\                               |  \\|  \\          \n'+'	| $$  | $$ \\$$$$$$$$| $$\\   /  $$| $$     | $$$$$$$       | $$ / \\ | $$  ______  | $$____    ______   ______    ____| $$ \\$$  ______  	\n'+'	| $$__| $$   | $$   | $$$\\ /  $$$| $$     | $$____        | $$/  $\\| $$ /      \\ | $$    \\  /      \\ |      \\  /      $$|  \\ /      \\ 	\n'+'	| $$    $$   | $$   | $$$$\\  $$$$| $$     | $$    \\       | $$  $$$\\ $$|  $$$$$$\\| $$$$$$$\\|  $$$$$$\\ \\$$$$$$\\|  $$$$$$$| $$|  $$$$$$\\	\n'+'	| $$$$$$$$   | $$   | $$\\$$ $$ $$| $$      \\$$$$$$$\\      | $$ $$\\$$\\$$| $$    $$| $$  | $$| $$   \\$$/      $$| $$  | $$| $$| $$  | $$	\n'+'	| $$  | $$   | $$   | $$ \\$$$| $$| $$_____|  \\__| $$      | $$$$  \\$$$$| $$$$$$$$| $$__/ $$| $$     |  $$$$$$$| $$__| $$| $$| $$__/ $$	\n'+'	| $$  | $$   | $$   | $$  \\$ | $$| $$     \\\\$$    $$      | $$$    \\$$$ \\$$     \\| $$    $$| $$      \\$$    $$ \\$$    $$| $$ \\$$    $$	\n'+'	 \\$$   \\$$    \\$$    \\$$      \\$$ \\$$$$$$$$ \\$$$$$$        \\$$      \\$$  \\$$$$$$$ \\$$$$$$$  \\$$       \\$$$$$$$  \\$$$$$$$ \\$$  \\$$$$$$ 	\n\n\n'+'	To disable this message type localStorage.setItem(\'displayEE\', \'false\') in javascript console \n\n'+'	The project on github : https://www.github.com/kranack/HTML5-webradio-app/ \n'+'	My website : http://www.damien.calesse.fr', 'font-size: 90%;');
 		}
 	}
 }();

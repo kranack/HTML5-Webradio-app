@@ -7,11 +7,11 @@ $(document).ready(function() {
 		  alert('Application successfully installed');
 		};
 		request_install.onerror = function() {
-			alert('Error installing application: ' + this.error.name);
+			console.error('Error installing application: ' + this.error.name);
 		};
 	  }
 	};
 	request.onerror = function() {
-	  alert('Error checking installation status: ' + this.error.message);
+	  console.error('Error checking installation status: ' + this.error.message);
 	};
 });

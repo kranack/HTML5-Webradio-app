@@ -10,5 +10,5 @@ function setToLowerCase (str) {
 }
 
 function displayDebug(message) {
-	return (DEBUG) ? console.log(message) : false;
+	return (DEBUG) ? console.debug(message) : false;
 }
