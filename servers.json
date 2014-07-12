@@ -26,6 +26,10 @@
 			"address": " "
 		},
 		{
+			"id" : "rtl2",
+			"address": ""
+		},
+		{
 			"id" : "franceinfo",
 			"address" : " "
 		},

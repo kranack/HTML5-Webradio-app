@@ -32,6 +32,11 @@
 			"address": "http://mp3lg4.tdf-cdn.com/9243/lag_164753.mp3"
 		},
 		{
+			"id" : "rtl2",
+			"name": "RTL2",
+			"address": "http://icecast.rtl2.fr/rtl2-1-48-72.aac"
+		},
+		{
 			"id" : "franceinfo",
 			"name" : "France Info",
 			"address" : "http://mp3.live.tv-radio.com/franceinfo/all/franceinfo.mp3"
