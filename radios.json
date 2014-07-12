@@ -34,7 +34,7 @@
 		{
 			"id" : "rtl2",
 			"name": "RTL2",
-			"address": "http://icecast.rtl2.fr/rtl2-1-48-72.aac"
+			"address": "http://streaming.radio.rtl2.fr/rtl2-1-44-128.mp3"
 		},
 		{
 			"id" : "franceinfo",
