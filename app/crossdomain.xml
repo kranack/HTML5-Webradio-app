@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
+<cross-domain-policy>
+	<!-- TODO : Change domain?	-->
+	<allow-access-from domain="i.sa.123.fr" to-ports="*" secure="false"/>
+</cross-domain-policy>
