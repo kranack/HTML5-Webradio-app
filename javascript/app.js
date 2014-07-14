@@ -13,7 +13,7 @@ var SERVER_URL = "http://i.sa.123.fr/uploads/webradio-server/";
 var SERVER_URL_LIB = "http://i.sa.123.fr/uploads/webradio-server/lib/";
 
 $(document).ready(function() {
-	var regex = /^[a-zA-Z0-9\-]*.mp3/;
+	//var regex = /^[a-zA-Z0-9\-]*.mp3/;
 	
 	// Initialize the player
 	RADIO_PLAYER.init();
@@ -187,17 +187,17 @@ var RADIO_PLAYER = function(){
 									if (r.now_playing.track == '')
 										$("#infos").html('<b>'+r.now_playing.emission+'</b> avec '+r.now_playing.animateur+'<br>'+setToLowerCase(r.now_playing.artist));
 									else
-										$("#infos").html('<b>'+r.now_playing.emission+'</b> avec '+r.now_playing.animateur+'<br>'+setToLowerCase(r.now_playing.artist)+'-'+r.now_playing.track);
+										$("#infos").html('<b>'+r.now_playing.emission+'</b> avec '+r.now_playing.animateur+'<br>'+setToLowerCase(r.now_playing.artist)+' - '+r.now_playing.track);
 								else
 									if (r.now_playing.track == '')
 										$("#infos").html('<b>'+r.now_playing.emission+'</b> <br>'+setToLowerCase(r.now_playing.artist));
 									else
-										$("#infos").html('<b>'+r.now_playing.emission+'</b> <br>'+setToLowerCase(r.now_playing.artist)+'-'+r.now_playing.track);
+										$("#infos").html('<b>'+r.now_playing.emission+'</b> <br>'+setToLowerCase(r.now_playing.artist)+' - '+r.now_playing.track);
 							else
 								if (r.now_playing.track == '')
 									$("#infos").html(setToLowerCase(r.now_playing.artist));
 								else
-									$("#infos").html(setToLowerCase(r.now_playing.artist)+'-'+r.now_playing.track);
+									$("#infos").html(setToLowerCase(r.now_playing.artist)+' - '+r.now_playing.track);
 							$("#radio").html(POOL_DATA_RADIOS[POOL_CURRENT_RADIO].name);
 							break;
 					}
@@ -217,9 +217,9 @@ var RADIO_PLAYER = function(){
 				list +=POOL_DATA_RADIOS[i].name;
 				list +='</option>';
 				
-				normalList +='<p id="'+POOL_DATA_RADIOS[i].id+'" value="'+i+'" >';
+				/*normalList +='<p id="'+POOL_DATA_RADIOS[i].id+'" value="'+i+'" >';
 				normalList +=POOL_DATA_RADIOS[i].name;
-				normalList +='</p>';
+				normalList +='</p>';*/
 			}
 			$("#chooseRadio").html(list);		
 		}
