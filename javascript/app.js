@@ -178,7 +178,7 @@ var RADIO_PLAYER = function(){
 					switch (POOL_DATA_RADIOS[POOL_CURRENT_RADIO].id) {
 						case 'chillstep' :
 							var art_inf = r.now_playing.artist.split("-");
-							$("#infos").html(art_inf[1]+'-'+r.now_playing.track);
+							$("#infos").html(art_inf[1]+' - '+r.now_playing.track);
 							$("#radio").html(art_inf[0]);
 							break;
 						default :
