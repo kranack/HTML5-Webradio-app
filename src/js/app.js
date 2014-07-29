@@ -10,7 +10,6 @@ var POOL_CURRENT_RADIO = 0;
 var POOL_DATA_RADIOS = null;
 var POOL_DATA_SERVERS = null;
 var SERVER_URL = "http://i.sa.123.fr/uploads/webradio-server/";
-var SERVER_URL_LIB = "http://i.sa.123.fr/uploads/webradio-server/lib/";
 
 $(document).ready(function() {
 	//var regex = /^[a-zA-Z0-9\-]*.mp3/;
@@ -170,7 +169,7 @@ var RADIO_PLAYER = function(){
 		onAir : function() {
 			$.ajax({
 				dataType: 'json',
-				url: SERVER_URL_LIB+'onAir.php',
+				url: SERVER_URL+'onAir.php',
 				type: 'POST',
 				data: 'server='+POOL_DATA_RADIOS[POOL_CURRENT_RADIO].id+'&address='+POOL_DATA_SERVERS[POOL_CURRENT_RADIO].address,
 				success: function(r) {
