@@ -12,3 +12,8 @@ function setToLowerCase (str) {
 function displayDebug(message) {
 	return (DEBUG) ? console.debug(message) : false;
 }
+
+
+require(['classes'], function() {
+	require(['app']);
+});
