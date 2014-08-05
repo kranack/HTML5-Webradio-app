@@ -166,7 +166,72 @@
         btnVolLess: null,
         btnVolMore: null,
 
-        initialize: function() {},
+        initialize: function() {
+
+          this.btnPlay = $('btn_play');
+          this.btnPause = $('btn_pause');
+          this.btnStop = $('btn_stop');
+          this.btnVolLess = $('btn_vol_less');
+          this.btnVolMore = $('btn_vol_more');
+
+          this.btnPlay.hide();
+          this.btnPause.hide();
+          this.btnPause.hide();
+          this.btnStop.hide();
+          this.btnVolLess.hide();
+          this.btnVolMore.hide();
+
+          /*this.radioPlayerContainer = $("player");
+          this.radioPlayer = this.radioPlayerContainer[0];
+          
+          $('controls').on('click', 'a', function(){
+            return false;
+          });
+
+          this.btnPlay.observe('click', function(){
+            this.radioPlayerContainer.play();
+            return false;
+          });
+          
+          this.btnPause.observe('click', function(){
+            this.radioPlayerContainer.pause();
+            return false;
+          });
+          
+          this.btnStop.observe('click', function(){
+            this.radioPlayerContainer.pause();
+            this.radioPlayerContainer.currentTime = 0;
+            return false;
+          });
+          
+          this.btnVolLess.observe('click', function(){
+            var vol = this.radioPlayer.volume;
+            vol-=0.2;
+            if (vol<0) vol=0;
+            this.radioPlayer.volume = vol;
+            return false;
+          });
+          
+          this.btnVolMore.observe('click', function(){
+            var vol = this.radioPlayer.volume;
+            vol+=0.2;
+            if (vol>1) vol=1;
+            this.radioPlayer.volume = vol;
+            return false;
+          });
+          
+          this.radioPlayerContainer.observe('play', function() {
+            this.btnPlay.hide();
+            this.btnPause.show();
+          });
+
+          this.radioPlayerContainer.observe('pause', function() {
+            this.btnPlay.show();
+            this.btnPause.hide();
+          });*/
+          
+
+        },
         displayRadios : function()
         {
           var list = '';
