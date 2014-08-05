@@ -8,6 +8,8 @@ Description
 -----------
 An online HTML5 Webradio Player for Firefox OS (work with https://github.com/kranack/HTML5-Webradio-serv)
 
+UP 05/08/2014 : Player now uses Comet style to update track and artist!
+
 Latest app version online : http://i.sa.123.fr/uploads/webradio-app/
 
 
@@ -26,6 +28,12 @@ Radios
 * `France Culture` : http://www.franceculture.fr/
 * `FIP` : http://www.fipradio.fr/
 		
+Libs
+----
+
+	- Require.js
+	- Prototype.js
+
 
 Author
 ------
