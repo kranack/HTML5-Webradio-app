@@ -14,6 +14,6 @@ function displayDebug(message) {
 }
 
 
-require(['classes.min'], function() {
-	require(['app.min']);
+require(['classes'], function() {
+	require(['app']);
 });

@@ -19,6 +19,9 @@
 body {
 	background-color: #221F20;
 	color: #C8C7C8;
+	font-size: 1.1em;
+	height: 100%;
+	width: 100%;
 }
 
 a {
@@ -42,7 +45,7 @@ option {
 
 #radioplayer {
 	margin: 5% auto 0 auto;
-	padding: 0 10px 20px 10px;
+	padding: 0 0 20px 0;
 	width: 100%;
 	text-align: center;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -69,14 +72,14 @@ option {
 #controls {
 	width: 100%;
 	padding: 10% 0 0 0;
-	margin-left: 25%;
+	/*margin-left: 25%;*/
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;         /* Opera/IE 8+ */
 }
 
 	#controls a {
-		margin: 0 8% 0 8%;
+		/*margin: 0 8% 0 8%;*/
 	}
 	
 #btn_play {
@@ -123,6 +126,9 @@ option {
 
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 	@media only screen and (max-width: 479px) {
+		body {
+			font-size: 1.5em;
+		}
 		#radioplayer {
 			margin: 10% auto 0 auto;
 			padding: 0 10px 20px 10px;
@@ -132,6 +138,10 @@ option {
 
 		#radioplayer * {
 			margin-top: 5%;
+		}
+
+		#chooseRadio {
+			margin-top: 10%;
 		}
 		/*#controls a {
 			margin: 0 4% 0 4%;
