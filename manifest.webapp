@@ -17,5 +17,6 @@
     "name": "Damien Calesse",
     "url": "http://www.damien.calesse.fr"
   },
-  "default_locale": "fr"
+  "default_locale": "fr",
+  "version": "0.1.5"
 }
