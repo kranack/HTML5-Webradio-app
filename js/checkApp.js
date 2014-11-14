@@ -1,17 +1,12 @@
-$(document).ready(function() {
-	var request = navigator.mozApps.checkInstalled("http://i.sa.123.fr/uploads/webradio-app/manifest.webapp");
-	request.onsuccess = function() {
-	  if (!request.result) {
-	    var request_install = navigator.mozApps.install("http://i.sa.123.fr/uploads/webradio-app/manifest.webapp");
-		request_install.onsuccess = function() {
-		  alert('Application successfully installed');
-		};
-		request_install.onerror = function() {
-			console.error('Error installing application: ' + this.error.name);
-		};
-	  }
-	};
-	request.onerror = function() {
-	  console.error('Error checking installation status: ' + this.error.message);
-	};
-});
+var isFFOS = ("mozApps" in navigator && navigator.userAgent.search("Mobile") != -1);
+
+if ( isFFOS ) {
+  var manifestUrl = 'http://www.kranack.ovh/uploads/webradio-app/manifest.webapp';
+  var req = navigator.mozApps.installPackage(manifestUrl);
+  req.onsuccess = function() {
+    console.log(this.result.origin);
+  };
+  req.onerror = function() {
+    console.log(this.error.name);
+  };
+}

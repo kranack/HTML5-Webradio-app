@@ -1,8 +1,12 @@
-      var DEBUG = 0;
-      var POOL_CURRENT_RADIO = 0;
-      var POOL_DATA_RADIOS = [];
-      var POOL_DATA_SERVERS = [];
-      var SERVER_URL = "http://i.sa.123.fr/uploads/webradio-server/";
+/*----------- Config ----------------------*/
+
+var DEBUG = 0;
+var POOL_CURRENT_RADIO = getRadio();
+var POOL_DATA_RADIOS = [];
+var POOL_DATA_SERVERS = [];
+var SERVER_URL = "http://www.kranack.ovh/uploads/webradio-server/";
+
+// -----------------------------------------
 
 
       /************************************
@@ -181,62 +185,15 @@
           this.btnVolLess.hide();
           this.btnVolMore.hide();
 
-          /*this.radioPlayerContainer = $("player");
-          this.radioPlayer = this.radioPlayerContainer[0];
-          
-          $('controls').on('click', 'a', function(){
-            return false;
-          });
-
-          this.btnPlay.observe('click', function(){
-            this.radioPlayerContainer.play();
-            return false;
-          });
-          
-          this.btnPause.observe('click', function(){
-            this.radioPlayerContainer.pause();
-            return false;
-          });
-          
-          this.btnStop.observe('click', function(){
-            this.radioPlayerContainer.pause();
-            this.radioPlayerContainer.currentTime = 0;
-            return false;
-          });
-          
-          this.btnVolLess.observe('click', function(){
-            var vol = this.radioPlayer.volume;
-            vol-=0.2;
-            if (vol<0) vol=0;
-            this.radioPlayer.volume = vol;
-            return false;
-          });
-          
-          this.btnVolMore.observe('click', function(){
-            var vol = this.radioPlayer.volume;
-            vol+=0.2;
-            if (vol>1) vol=1;
-            this.radioPlayer.volume = vol;
-            return false;
-          });
-          
-          this.radioPlayerContainer.observe('play', function() {
-            this.btnPlay.hide();
-            this.btnPause.show();
-          });
-
-          this.radioPlayerContainer.observe('pause', function() {
-            this.btnPlay.show();
-            this.btnPause.hide();
-          });*/
-          
-
         },
         displayRadios : function()
         {
           var list = '';
           for (var i=0; i<POOL_DATA_RADIOS.length; i++){
-            list +='<option id="'+POOL_DATA_RADIOS[i]['id']+'" value="'+i+'" >';
+            if (POOL_CURRENT_RADIO == i)
+              list +='<option id="'+POOL_DATA_RADIOS[i]['id']+'" value="'+i+'" selected>';
+            else
+              list +='<option id="'+POOL_DATA_RADIOS[i]['id']+'" value="'+i+'" >';
             list +=POOL_DATA_RADIOS[i]['name'];
             list +='</option>';
           }
@@ -247,5 +204,9 @@
 var datas = new Datas();
 datas.getServersList();
 datas.getRadiosList();
+console.log(POOL_DATA_RADIOS);
+console.log(POOL_DATA_SERVERS);
+console.log(POOL_CURRENT_RADIO);
 var player = new Player();
 player.displayRadios.delay(1);
+

@@ -11,7 +11,8 @@
   },
   "installs_allowed_from": [
     "https://marketplace.firefox.com",
-    "http://i.sa.123.fr/uploads/webradio-app"
+    "http://i.sa.123.fr/uploads/webradio-app",
+    "http://www.kranack.ovh/uploads/webradio-app"
   ],
   "developer": {
     "name": "Damien Calesse",
