@@ -4,7 +4,7 @@ var DEBUG = 0;
 var POOL_CURRENT_RADIO = getRadio();
 var POOL_DATA_RADIOS = [];
 var POOL_DATA_SERVERS = [];
-var SERVER_URL = "http://www.kranack.ovh/uploads/webradio-server/";
+var SERVER_URL = "http://i.sa.123.fr/uploads/webradio-server/";
 
 // -----------------------------------------
 
