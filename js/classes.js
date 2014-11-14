@@ -204,9 +204,6 @@ var SERVER_URL = "http://www.kranack.ovh/uploads/webradio-server/";
 var datas = new Datas();
 datas.getServersList();
 datas.getRadiosList();
-console.log(POOL_DATA_RADIOS);
-console.log(POOL_DATA_SERVERS);
-console.log(POOL_CURRENT_RADIO);
 var player = new Player();
 player.displayRadios.delay(1);
 
