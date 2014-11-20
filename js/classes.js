@@ -74,6 +74,8 @@ var SERVER_URL = "http://i.sa.123.fr/uploads/webradio-server/";
 
         disconnect: function()
         {
+        	this.ajax.comet = null;
+        	this.ajax = null;
         },
 
         handleResponse: function(response)
