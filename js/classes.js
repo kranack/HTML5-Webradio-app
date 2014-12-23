@@ -88,42 +88,29 @@ var SERVER_URL = "http://i.sa.123.fr/uploads/webradio-server/";
         {
           var r = '';
           displayDebug('DEBUT PARSEREPONSE');
-          switch (this.server)
-          {
-            case 'chillstep':
-                displayDebug('CASE chillstep');
-                var art_inf = response['now_playing']['artist'].split("-");
-                $("infos").innerHTML = art_inf[1] + ' - ' + response['now_playing']['track'];
-                $("radio").innerHTML = art_inf[0];
-              break;
-            default :
-                displayDebug('DEFAULT CASE');
-                if (response['now_playing']['emission']) {
-                  displayDebug('EMISSION == TRUE');
-                  if(response['now_playing']['animateur']) {
-                    displayDebug('ANIMATEUR == TRUE');
-                    if (response['now_playing']['track'] == '')
-                      r = '<b>'+response['now_playing']['emission'] + '</b> avec ' + response['now_playing']['animateur'] + '<br>' + setToLowerCase(response['now_playing']['artist']);
-                    else
-                      r = '<b>'+response['now_playing']['emission'] + '</b> avec '+response['now_playing']['animateur'] + '<br>' + setToLowerCase(response['now_playing']['artist']) + ' - ' + response['now_playing']['track'];
-                  } else {
-                    displayDebug('ANIMATEUR == FALSE');
-                    if (response['now_playing']['track'] == '')
-                      r = '<b>' + response['now_playing']['emission'] + '</b> <br>' + setToLowerCase(response['now_playing']['artist']);
-                    else
-                      r = '<b>' + response['now_playing']['emission'] + '</b> <br>' + setToLowerCase(response['now_playing']['artist']) + ' - ' + response['now_playing']['track'];
-                  }
-                } else {
-                  displayDebug('EMISSION == FALSE');
-                  if (response['now_playing']['track'] == '')
-                    r = setToLowerCase(response['now_playing']['artist']);
-                  else
-                    r = setToLowerCase(response['now_playing']['artist']) + ' - ' + response['now_playing']['track'];
-                }
-                displayDebug('END DEFAULT CASE');
-              break;
+          
+          if (response['now_playing']['emission']) {
+            displayDebug('EMISSION == TRUE');
+            if(response['now_playing']['animateur']) {
+              displayDebug('ANIMATEUR == TRUE');
+              if (response['now_playing']['track'] == '')
+                r = '<b>'+response['now_playing']['emission'] + '</b> avec ' + response['now_playing']['animateur'] + '<br>' + setToLowerCase(response['now_playing']['artist']);
+              else
+                r = '<b>'+response['now_playing']['emission'] + '</b> avec '+response['now_playing']['animateur'] + '<br>' + setToLowerCase(response['now_playing']['artist']) + ' - ' + response['now_playing']['track'];
+            } else {
+              displayDebug('ANIMATEUR == FALSE');
+              if (response['now_playing']['track'] == '')
+                r = '<b>' + response['now_playing']['emission'] + '</b> <br>' + setToLowerCase(response['now_playing']['artist']);
+              else
+                r = '<b>' + response['now_playing']['emission'] + '</b> <br>' + setToLowerCase(response['now_playing']['artist']) + ' - ' + response['now_playing']['track'];
+            }
+          } else {
+            displayDebug('EMISSION == FALSE');
+            if (response['now_playing']['track'] == '')
+              r = setToLowerCase(response['now_playing']['artist']);
+            else
+              r = setToLowerCase(response['now_playing']['artist']) + ' - ' + response['now_playing']['track'];
           }
-          displayDebug('END SWITCH');
 
           if (response['now_playing']['cover'])
             $('cover').innerHTML = '<a href="http://www.google.com/search?q=' + setToLowerCase(response['now_playing']['artist']) + '" target="_blank" ><img src="' + response['now_playing']['cover'] + '" alt/></a>';
